@@ -15,3 +15,9 @@ function renderBooks(books) {
 document.addEventListener('DOMContentLoaded', function() {
   fetchBooks();
 });
+
+// Lab deliverables
+//1) fetchBooks() function includes a fetch request method to Game Of Thrones API
+//2) The Returned response converted to JSON.
+//3) Call 2nd function passing in data from Step #2 as the argument.
+
