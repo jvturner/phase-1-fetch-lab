@@ -1,23 +1,24 @@
 
 function fetchBooks() {
 
-  fetch("https://anapioficeandfire.com/api/books")
+  return fetch("https://anapioficeandfire.com/api/books")
     .then(function (response) {
-      console.log(response);
-      return response.json();
+      return response.json()
     })
-    .then(function (json) {
-      console.log(json);
-    });
+    .then(function (data) {
+      console.log(data)
+    })
 
-};
-
-
+}
 
 
+console.log(fetchBooks)
 
 
-function renderBooks(books) {
+
+
+
+function renderBooks(info) {
   const books = response.json()
   const main = document.querySelector('main');
   books.forEach(book => {
