@@ -1,33 +1,32 @@
 
 function fetchBooks() {
 
-  const posts = fetch('https://anapioficeandfire.com/api/books')
-    .then(function (response){
-      return response.json()
-      console.log(json);
-    })
-    .then(data => {
-      console.log(data);
-    })
-  }
+  return fetch('https://anapioficeandfire.com/api/books')
+    .then((response) => response.json())
+    .then((json) => renderBooks(json));
 
+}
 
- function renderBooks(data) {
-  const books = response.json()
+function renderBooks(books) {
+  console.log(books)
+
   const main = document.querySelector('main');
   books.forEach(book => {
     const h2 = document.createElement('h2');
     h2.innerHTML = book.name;
     main.appendChild(h2);
- console.log(data)
+    // console.log(data)
   });
 }
 
-function renderBooks();
 
 document.addEventListener('DOMContentLoaded', function () {
   fetchBooks();
 });
+// QUESTIONS FOR TOMAS
+// 1) Syntax to passing in the JSON-ified data as the
+// argument in the second function.
+
 
 // Lab deliverables
 //1) fetchBooks() function includes a fetch request method to Game Of Thrones API
